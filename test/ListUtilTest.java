@@ -38,8 +38,7 @@ public class ListUtilTest {
 
     @Test
     public void testNullElement(){
-        List<?> list = java.util.Arrays.asList(null, null, null);
-        assertEquals(1, ListUtil.countUnique(createList(list)));
+        assertEquals(1, ListUtil.countUnique(createList(null, null)));
     }
 
     private List<?> createList(Object ... element){

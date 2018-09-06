@@ -1,11 +1,16 @@
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * A ListUtil class for contain method that can use with List.
+ *
+ * @Author Pornpavee Seri-umnuoy
+ */
 public class ListUtil {
     /**
      * Count the number of distinct elements in a list.
      * The list may be empty but not null.
-     * TODO: can the list contain null values? Does null count as a unique element?
+     * The list can contain null values and null count as a unique element.
      *
      * @param list a list of elements
      * @return the number of distinct elements in list
