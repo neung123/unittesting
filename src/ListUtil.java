@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -23,5 +24,23 @@ public class ListUtil {
             if(!temp.contains(element)) temp.add(element);
         }
         return temp.size();
+    }
+
+    public static <T extends Comparable<? super T>> int binarySearch(T[] array, T element){
+
+        if(element == null) throw new IllegalArgumentException("Search element must not be null");
+
+        Arrays.sort(array);
+        int start = 0;
+        int end = array.length-1;
+        int position;
+
+        while (end >= start) {
+            position = (start + end) / 2;
+            if (element.compareTo(array[position]) == 0) return position;
+            else if (element.compareTo(array[position]) > 0) start = position + 1;
+            else end = position - 1;
+        }
+        return  -1;
     }
 }
